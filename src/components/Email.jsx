@@ -1,7 +1,15 @@
 import React from "react";
 import "../App.css";
+import { useNavigate } from "react-router-dom";
 
 const Email = () => {
+  
+  const navigate=useNavigate();
+  
+  const handleclick=()=>{
+    navigate('/reset')
+  }
+
   return (
     <div className="bg-white w-full max-w-md flex flex-col justify-center items-center mx-auto mt-8 p-4 sm:p-8 md:mt-[6rem] md:p-10 max-sm:mt-[9rem]">
       <div className="flex flex-col justify-center items-start w-full">
@@ -22,7 +30,7 @@ const Email = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center pt-7 w-full">
-        <button className="bg-blue-700 w-full text-white p-2 rounded hover:bg-blue-600">
+        <button className="bg-blue-700 w-full text-white p-2 rounded hover:bg-blue-600" onClick={handleclick}>
           Request Password Reset
         </button>
         <a href="#" className="pb-5 pt-1.5 text-blue-600 font-semibold ">

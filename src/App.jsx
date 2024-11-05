@@ -1,10 +1,17 @@
 import React from 'react'
 import Email from './components/email'
+import Password from './components/Password'
+import {BrowserRouter,Routes,Route} from "react-router-dom"
 
 const App = () => {
   return (
     <div>
-      <Email/>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Email/>}/>
+        <Route path='/reset' element={<Password/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }
